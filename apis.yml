@@ -1,7 +1,12 @@
 aid: boston-scientific
-url: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.boston-scientific.com
+description: >-
+  Boston Scientific is a global medical device manufacturer that develops, manufactures,
+  and markets medical devices used in interventional medical specialties including
+  interventional cardiology, urology, and endoscopy.
