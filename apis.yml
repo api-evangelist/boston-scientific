@@ -24,6 +24,10 @@ description: >-
   innovative medical solutions.
 apis: []
 common:
+  - type: GitHubOrganization
+    url: https://github.com/bos-sci
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/boston-scientific
   - type: Website
     url: https://www.bostonscientific.com
   - type: InvestorRelations
