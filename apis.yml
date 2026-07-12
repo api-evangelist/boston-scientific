@@ -25,6 +25,8 @@ description: >-
   innovative medical solutions.
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/boston-scientific-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/bos-sci
   - type: LinkedIn
