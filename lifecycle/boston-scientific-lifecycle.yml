@@ -1,0 +1,46 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  Searched Boston Scientific's customer-service, product-security and Cardiac Diagnostics
+  surfaces, the LATITUDE integration specification PDFs, and the bos-sci GitHub organization
+  for an API versioning policy, a deprecation policy, an SLA and a status page.
+note: >-
+  NOTHING WAS FOUND for any of the four. This file records honest zeros with the probes that
+  established them, so no StatusPage or Deprecation pointer is wired into apis.yml.
+versioning:
+  policy_published: false
+  scheme: null
+  note: >-
+    The only versioning Boston Scientific publishes is document revision on the integration
+    specification PDFs (the current LATITUDE IDCO/HL7 document is part number 359483-012) and
+    semver on the Anatomy Design System npm packages. Neither is an API versioning policy,
+    because there is no API. The HL7 message profiles themselves are pinned to external
+    standard versions — HL7 v2.6 for IDCO and HL7 v2.3.1 for the LATITUDE HL7 file — and a
+    change there would be a change to the standard, not to a Boston Scientific version scheme.
+deprecation:
+  policy_published: false
+  sunset_header: false
+  deprecation_header: false
+  rfc8594: false
+  note: >-
+    No deprecation policy, no Sunset/Deprecation header convention, and no announced
+    end-of-life process for an integration interface.
+sla:
+  published: false
+  note: No uptime or support SLA is published for any integration surface.
+status_page:
+  exists: false
+  probes:
+    - url: https://status.bostonscientific.com
+      status: 000
+      note: Host does not resolve.
+    - url: https://status.cdx.bostonscientific.com
+      status: 000
+      note: Host does not resolve.
+    - url: https://bostonscientific.statuspage.io
+      status: 200
+      note: >-
+        Soft-200. Redirects to Atlassian's own Statuspage marketing page
+        (canonical https://www.atlassian.com/software/statuspage) — the subdomain is not
+        claimed. NOT a Boston Scientific status page.
+deprecated_operations: []

@@ -1,0 +1,55 @@
+generated: '2026-09-04'
+method: searched
+source: https://github.com/bos-sci/anatomy-react/releases
+note: >-
+  Boston Scientific publishes NO API changelog — there is no API. The only dated, versioned
+  release history the company publishes is the GitHub release feed of the Anatomy Design System
+  React component library, recorded here because it is the single first-party surface with a
+  real version scheme and real dates. It stopped in March 2024.
+scheme: semver
+applies_to: '@boston-scientific/anatomy-react (Anatomy Design System)'
+current_version: 2.4.2
+current_version_date: '2024-03-08'
+last_release: '2024-03-08'
+staleness_note: >-
+  Two and a half years without a release as of this pass. Every other package on the
+  @boston-scientific npm scope is older still (2023-08 to 2023-11).
+feed_urls:
+  - https://github.com/bos-sci/anatomy-react/releases
+  - https://github.com/bos-sci/anatomy-react/releases.atom
+changelog_file: null
+changelog_file_note: >-
+  No CHANGELOG.md in the repository — raw.githubusercontent.com/bos-sci/anatomy-react/main/CHANGELOG.md
+  returns 404. Release notes exist only as GitHub release objects.
+entries:
+  - version: v2.4.2
+    date: '2024-03-08'
+    breaking: false
+  - version: v2.4.1
+    date: '2024-02-13'
+    breaking: false
+  - version: v2.4.0
+    date: '2024-02-12'
+    breaking: false
+  - version: v2.3.0
+    date: '2024-01-24'
+    breaking: false
+  - version: v2.2.2
+    date: '2024-01-11'
+    breaking: false
+  - version: v2.2.1
+    date: '2023-12-21'
+    breaking: false
+  - version: v2.2.0
+    date: '2023-12-21'
+    breaking: false
+  - version: v2.1.0
+    date: '2023-12-01'
+    breaking: false
+  - version: v2.0.5
+    date: '2023-11-22'
+    breaking: false
+  - version: v2.0.4
+    date: '2023-11-16'
+    breaking: false
+entry_count: 10

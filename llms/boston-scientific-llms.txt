@@ -1,0 +1,80 @@
+# Boston Scientific
+
+> Boston Scientific Corporation (NYSE: BSX) is a global medical device manufacturer headquartered
+> in Marlborough, Massachusetts, founded in 1979. It develops, manufactures and markets devices
+> used in interventional medical specialties including interventional cardiology, cardiac rhythm
+> management, electrophysiology, urology, pelvic health, endoscopy, neuromodulation and
+> peripheral interventions.
+
+> METHOD: generated 2026-09-04 by the API Evangelist enrichment pipeline from this repository's
+> apis.yml and the artifacts listed below. Boston Scientific does not publish an llms.txt of its
+> own — /llms.txt returns HTTP 404 on www.bostonscientific.com, bostonscientific.com,
+> latitude.bostonscientific.com, investors.bostonscientific.com and news.bostonscientific.com.
+
+## What an agent can and cannot do here
+
+Boston Scientific publishes **no HTTP API**. There is no OpenAPI, no AsyncAPI, no GraphQL SDL, no
+WSDL, no MCP server, no A2A agent card and no developer portal. An agent cannot call this company.
+
+What the company does publish is a **healthcare-messaging integration contract**, distributed as
+PDF specification documents, for getting implanted-device observations out of its LATITUDE remote
+patient monitoring system and into a hospital EMR. That contract is real, versioned and grounded
+in named international standards — it is simply not machine-readable and not callable.
+
+## Integration contract (HL7 v2 / IHE PCD, PDF)
+
+- [LATITUDE Integration IDCO and HL7 Specifications](https://www.bostonscientific.com/content/dam/elabeling/crm/pr/359483-012_LATITUDE_CM_en_S.pdf): The full message specification. Declares two profiles — an IDCO profile that is a PCD-09 message per IHE PCD Technical Framework Revision 3.0, carried as a standard HL7 v2.6 unsolicited orders and observations message (ORU^R01^ORU_R01), and a LATITUDE HL7 file profile based on the HL7 2.3.1 Observation Result Unsolicited message (ORU^R01). Includes segment structures and complete worked example messages.
+- [LATITUDE NXT IDCO Specification](https://www.bostonscientific.com/content/dam/elabeling/crm/pr/359273-011_LATITUDE_NXT_IDCO_en-GBR_W_S.pdf): The IDCO-only edition of the same contract.
+- [LATITUDE EMR Integration solutions overview](https://www.bostonscientific.com/content/dam/bostonscientific/Rhythm%20Management/portfolio-group/LATITUDE/PDFs/CRM-922306-AA_Latitude_EMR_Integration_solutions_EN.pdf): Product-level description of the EMR integration.
+- [Instructions for Use / eLabeling](https://www.bostonscientific.com/ifu): Where Boston Scientific directs readers to find the current integration specification documents.
+
+Observation codes use the ISO/IEEE 11073-10103:2014 IDC nomenclature (e.g.
+`MDC_IDC_SET_BRADY_MAX_TRACKING_RATE`). Message character set is declared in MSH-18; message
+correlation is MSH-10.
+
+## Products with an integration surface
+
+- [LATITUDE Programming System, Model 3300](https://www.bostonscientific.com/en-US/products/remote-patient-monitoring/LATITUDE-programming-system.html)
+- [LATITUDE Programming System — Data Management](https://www.bostonscientific.com/en-US/products/remote-patient-monitoring/LATITUDE-programming-system/data-management.html)
+- [Remote Patient Monitoring](https://www.bostonscientific.com/en-US/products/remote-patient-monitoring.html)
+- [Cardiac Diagnostic Solutions](https://www.bostonscientific.com/en-US/medical-specialties/electrophysiology/cds.html)
+- [BodyGuardian Integration Solutions](https://www.cdx.bostonscientific.com/us/en/healthcare-professionals/services-technologies/integration-solutions.html): Names an "Application Program Interface (API) for raw data access" alongside a discrete-data-element orders-and-results interface. No reference, endpoint, key issuance or price is published for it; access is arranged with the integration team. Claims HIPAA, HITECH and SOC 2 Type 2 alignment. Lists live EMR integrations with Athena Health, Meditech, Cerner, GE, Epic, Epiphany and eClinicalWorks.
+
+## Product security
+
+- [Responsible Disclosure](https://www.bostonscientific.com/en-US/customer-service/product-security/responsible-disclosure.html): Report to product.security@bsci.com. Acknowledgement within five business days. Scope is device and Software-as-a-Medical-Device software. No bug bounty. No PGP key. No safe-harbor clause.
+- [Product Security](https://www.bostonscientific.com/en-US/customer-service/product-security.html)
+- [Product Security Information](https://www.bostonscientific.com/en-US/customer-service/product-security/product-security-information.html)
+- [Data security, cybersecurity and privacy](https://www.bostonscientific.com/en-US/corporate-responsibility/integrity/data-security-cybersecurity-and-privacy.html)
+
+No /.well-known/security.txt is served on any Boston Scientific host.
+
+## Open source
+
+Boston Scientific's public code is a design system, not an API SDK.
+
+- [bos-sci on GitHub](https://github.com/bos-sci): five repositories, none pushed since May 2024.
+- [@boston-scientific/anatomy-react](https://www.npmjs.com/package/@boston-scientific/anatomy-react): React component library, v2.4.2, published 2024-03-08.
+- [@boston-scientific/anatomy-tokens](https://www.npmjs.com/package/@boston-scientific/anatomy-tokens): design tokens (scss/less/css/json), v4.0.2, published 2023-11-15.
+- [@boston-scientific/stylelint-config](https://www.npmjs.com/package/@boston-scientific/stylelint-config): v1.1.0, 2023-11-06.
+- [@boston-scientific/eslint-config](https://www.npmjs.com/package/@boston-scientific/eslint-config): v0.0.3, 2023-08-23.
+- [@boston-scientific/prettier-config](https://www.npmjs.com/package/@boston-scientific/prettier-config): v1.0.1, 2023-08-21.
+- [Anatomy Design System docs](https://www.anatomydesignsystem.com): served behind a JavaScript bot-challenge interstitial; a crawler sees "Loading..." rather than the reference.
+
+## Company
+
+- [Website](https://www.bostonscientific.com)
+- [About Boston Scientific](https://www.bostonscientific.com/en-US/about-us.html)
+- [Medical Specialties](https://www.bostonscientific.com/en-US/medical-specialties.html)
+- [Investor Relations](https://investors.bostonscientific.com/)
+- [Newsroom](https://news.bostonscientific.com/)
+- [Careers](https://www.bostonscientific.com/en-US/careers.html)
+- [Customer Service](https://www.bostonscientific.com/en-US/customer-service.html)
+- [Account Registration](https://www.bostonscientific.com/en-US/account/registration.html)
+- [Terms of Use](https://www.bostonscientific.com/en-US/terms-of-use.html)
+- [Privacy Policy](https://www.bostonscientific.com/en-US/privacy-policy.html)
+- [LinkedIn](https://www.linkedin.com/company/boston-scientific)
+
+## Optional
+
+- [This profile on GitHub](https://github.com/api-evangelist/boston-scientific): the API Evangelist record, including the well-known probe log, the conformance assertions with their quoted evidence, and the package currency data behind the statements above.

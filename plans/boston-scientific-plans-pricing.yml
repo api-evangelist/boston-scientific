@@ -1,0 +1,25 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  https://www.cdx.bostonscientific.com/us/en/healthcare-professionals/services-technologies/integration-solutions.html
+  plus a search of bostonscientific.com for any developer, API or integration pricing page.
+plan_count: 0
+plans: []
+note: >-
+  Boston Scientific publishes no API plans, no developer pricing and no self-service signup.
+  Integration is a service delivered inside a device or diagnostics contract, arranged with the
+  Boston Scientific integration team — the Cardiac Diagnostics integration page states there is
+  "no charge for standard integration work" for existing customers, which is the closest thing
+  to a published price and is not a plan. Nothing here is a tier, a quota or an overage rate;
+  recording plan_count: 0 rather than omitting the file is the honest measurement.
+pricing_model: bundled-with-device-or-service-contract
+self_service_signup: false
+free_tier: false
+public_pricing_page: false
+evidence:
+  - url: https://www.cdx.bostonscientific.com/us/en/healthcare-professionals/services-technologies/integration-solutions.html
+    status: 200
+    finding: >-
+      Names an "Application Program Interface (API) for raw data access" as one integration
+      option alongside a discrete-data-element orders-and-results interface, but publishes no
+      reference, no endpoint, no key issuance and no price.

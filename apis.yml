@@ -36,7 +36,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/boston-scientific.png
 access: 3rd-Party
 created: '2026-03-21'
-modified: '2026-04-21'
+modified: '2026-09-04'
 position: Consuming
 description: >-
   Boston Scientific is a global medical device manufacturer that develops,
@@ -56,13 +56,45 @@ common:
   - type: Website
     url: https://www.bostonscientific.com
   - type: InvestorRelations
-    url: https://www.bostonscientific.com/en-US/investor-relations.html
-  - type: DigitalHealth
-    url: https://www.bostonscientific.com/en-US/about-us/digital-health.html
-  - type: HCPPortal
-    url: https://www.bostonscientific.com/en-US/hcp.html
+    url: https://investors.bostonscientific.com/
   - type: Careers
     url: https://www.bostonscientific.com/en-US/careers.html
+  - type: Documentation
+    url: https://www.bostonscientific.com/content/dam/elabeling/crm/pr/359483-012_LATITUDE_CM_en_S.pdf
+  - type: Support
+    url: https://www.bostonscientific.com/en-US/customer-service.html
+  - type: Blog
+    url: https://news.bostonscientific.com/
+  - type: SignUp
+    url: https://www.bostonscientific.com/en-US/account/registration.html
+  - type: TermsOfService
+    url: https://www.bostonscientific.com/en-US/terms-of-use.html
+  - type: PrivacyPolicy
+    url: https://www.bostonscientific.com/en-US/privacy-policy.html
+  - type: Security
+    url: security/boston-scientific-vulnerability-disclosure.yml
+  - type: VulnerabilityDisclosure
+    url: security/boston-scientific-vulnerability-disclosure.yml
+  - type: Compliance
+    url: conformance/boston-scientific-conformance.yml
+  - type: Conformance
+    url: conformance/boston-scientific-conformance.yml
+  - type: Packages
+    url: packages/boston-scientific-packages.yml
+  - type: Components
+    url: components/boston-scientific-components.yml
+  - type: ChangeLog
+    url: changelog/boston-scientific-changelog.yml
+  - type: Lifecycle
+    url: lifecycle/boston-scientific-lifecycle.yml
+  - type: Plans
+    url: plans/boston-scientific-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/boston-scientific-rate-limits.yml
+  - type: Conventions
+    url: conventions/boston-scientific-conventions.yml
+  - type: LLMsTxt
+    url: llms/boston-scientific-llms.txt
 properties:
   - type: x-domain
     value: bostonscientific.com
@@ -95,3 +127,26 @@ maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
 specificationVersion: '0.23'
+x-enrichment:
+  date: '2026-09-04'
+  status: minimal
+  artifacts_added: 13
+  pass: local-v3
+x-coverage:
+  state: unreadable
+  reason: pdf-only-docs
+  detail: >-
+    Boston Scientific's only published integration contract — the LATITUDE Integration IDCO and
+    HL7 Specifications, which pins HL7 v2.6 / IHE PCD-09 / ISO-IEEE 11073-10103:2014 by name —
+    ships exclusively as a 7 MB PDF on the eLabeling CDN, with no OpenAPI, AsyncAPI or schema
+    anywhere alongside it.
+  evidence:
+    - url: https://www.bostonscientific.com/content/dam/elabeling/crm/pr/359483-012_LATITUDE_CM_en_S.pdf
+      status: 200
+    - url: https://www.bostonscientific.com/openapi.json
+      status: 404
+    - url: https://cdx.bostonscientific.com/openapi.json
+      status: 200
+    - url: https://www.bostonscientific.com/.well-known/api-catalog
+      status: 404
+  checked: '2026-09-04'

@@ -1,0 +1,90 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  LATITUDE Integration IDCO and HL7 Specifications
+  (https://www.bostonscientific.com/content/dam/elabeling/crm/pr/359483-012_LATITUDE_CM_en_S.pdf,
+  HTTP 200) and the Boston Scientific Cardiac Diagnostics integration-solutions page. Derived
+  from the message contract Boston Scientific actually publishes; no OpenAPI exists to derive
+  from.
+note: >-
+  READ THIS BEFORE READING THE FIELDS. Boston Scientific's published integration surface is
+  HL7 v2 messaging, not an HTTP API. Boston Scientific systems EMIT observation messages into a
+  customer EMR; a caller does not invoke an operation. Most of the cross-cutting web-API
+  semantics below therefore evaluate to `na` rather than to a failing `none` — an HL7 v2 ORU
+  feed has no idempotency key because it has no client-initiated write, and no reversal
+  operation because it has no operation.
+interface_style: hl7v2-messaging
+auth:
+  style: not-applicable
+  note: >-
+    No API credential is issued or documented. Message delivery is configured per clinic during
+    an integration engagement; no public auth scheme, key format or token flow is published.
+idempotency:
+  supported: false
+  coverage: na
+  scope: []
+  header: null
+  note: >-
+    `na`, not `none`: there is no client-initiated mutating operation to replay. Message
+    de-duplication in the published contract is carried by MSH-10 Message Control ID on each
+    ORU^R01 message, which the receiving EMR is expected to use — that is receiver-side
+    de-duplication of a push feed, not an idempotency mechanism a caller can invoke.
+reversibility:
+  grade: na
+  supported: false
+  operations: []
+  note: >-
+    `na`. The published surface is read-only from the integrator's side: Boston Scientific sends
+    observation results, the EMR receives them. There is no create, update or delete to take
+    back, so there is nothing to reverse and no window to state. Recorded as `na` deliberately
+    rather than as a zero.
+dry_run_mode:
+  supported: false
+  grade: na
+  note: >-
+    `na` for the same reason as reversibility — no write surface. The specification does publish
+    complete worked example messages (see "EXAMPLE IDCO FILES"), which is the closest thing to a
+    rehearsal aid an integrator gets, but it is documentation, not a dry-run mode.
+pagination:
+  style: not-applicable
+  note: One message per device transmission; no collection endpoint, no cursor, no page size.
+versioning:
+  in_contract: true
+  mechanism: >-
+    Version is carried inside the message itself, in MSH-12. The IDCO profile pins HL7 v2.6
+    ("ORU^R01^ORU_R01|1000000134|P|2.6"); the LATITUDE HL7 file profile pins HL7 v2.3.1
+    ("ORU^R01|1000000138|P|2.3.1"). Document revision is carried in the specification part
+    number (currently 359483-012).
+  api_versioning_policy: false
+error_envelope:
+  format: hl7-ack
+  note: >-
+    No RFC 9457 problem+json and no HTTP status semantics. Acknowledgement, where the receiving
+    system supports it, is HL7 v2 ACK. The specification does not publish an enumerated error or
+    reject-reason catalog, which is why no errors/ artifact was derived.
+rate_limit_signaling:
+  supported: false
+  note: See rate-limits/boston-scientific-rate-limits.yml — nothing published, nothing to signal.
+request_id_tracing:
+  supported: true
+  field: MSH-10 Message Control ID
+  note: >-
+    Every message carries a unique control ID that both sides can trace. This is the one runtime
+    correlation signal the published contract does provide.
+character_encoding:
+  declared: true
+  field: MSH-18
+  values:
+    - UNICODE UTF-8
+    - UNICODE
+  note: >-
+    The specification instructs the receiving system to check MSH-18 to identify the character
+    set — an explicit, documented interoperability convention.
+metadata_fields: []
+field_expansion:
+  supported: false
+cross_links:
+  conformance: conformance/boston-scientific-conformance.yml
+  lifecycle: lifecycle/boston-scientific-lifecycle.yml
+  rate_limits: rate-limits/boston-scientific-rate-limits.yml
+  well_known: well-known/boston-scientific-well-known.yml

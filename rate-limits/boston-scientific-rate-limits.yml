@@ -1,0 +1,17 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  The LATITUDE Integration IDCO and HL7 Specifications PDF and the Boston Scientific Cardiac
+  Diagnostics integration-solutions page — the only two places the company documents an
+  integration interface.
+limit_count: 0
+limits: []
+response_headers: []
+exhaustion_status: null
+note: >-
+  No rate limits are published, and there is no HTTP surface on which to observe them. The
+  documented integration is HL7 v2 message delivery (ORU^R01 observation results pushed to an
+  EMR when a device transmission is processed), not a request/response API, so there is no
+  quota, no window and no RateLimit-* header to record. This is an honest zero, not an
+  unchecked field.
+observed: false

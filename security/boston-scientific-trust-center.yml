@@ -1,0 +1,43 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  https://www.bostonscientific.com/en-US/corporate-responsibility/integrity/data-security-cybersecurity-and-privacy.html
+  and https://www.cdx.bostonscientific.com/us/en/healthcare-professionals/services-technologies/integration-solutions.html
+x-evidence:
+  fetched: '2026-09-04'
+  probes:
+    - url: https://www.bostonscientific.com/en-US/corporate-responsibility/integrity/data-security-cybersecurity-and-privacy.html
+      http_status: 200
+    - url: https://www.cdx.bostonscientific.com/us/en/healthcare-professionals/services-technologies/integration-solutions.html
+      http_status: 200
+trust_center:
+  exists: false
+  note: >-
+    Boston Scientific operates NO trust center in the sense this artifact means it — there is no
+    portal where a prospective integrator can request or download an audit report, a SOC 2
+    package, a penetration-test summary or a subprocessor list. What exists is a corporate
+    responsibility page describing the data-security and privacy program in prose, plus a single
+    certification claim on one product page. Both are recorded below because the certification
+    claim is specific and named; neither is downloadable evidence.
+  certifications_claimed:
+    - name: SOC 2 Type 2
+      scope: >-
+        Boston Scientific Cardiac Diagnostics (BodyGuardian / Preventice) integration service.
+      evidence: >-
+        "System and Organization Controls (SOC) for Service Organizations (SOC2 Type 2)" stated
+        on the Cardiac Diagnostics integration-solutions page.
+      url: https://www.cdx.bostonscientific.com/us/en/healthcare-professionals/services-technologies/integration-solutions.html
+      report_available: false
+      report_note: No report, bridge letter or request form is offered for this claim.
+    - name: HIPAA / HITECH
+      scope: Cardiac Diagnostics integration activities.
+      evidence: >-
+        The same page states integration activities follow HIPAA and HITECH requirements and
+        HL7 interchange guidelines.
+      url: https://www.cdx.bostonscientific.com/us/en/healthcare-professionals/services-technologies/integration-solutions.html
+      report_available: false
+  program_pages:
+    - name: Data security, cybersecurity and privacy
+      url: https://www.bostonscientific.com/en-US/corporate-responsibility/integrity/data-security-cybersecurity-and-privacy.html
+    - name: Product Security
+      url: https://www.bostonscientific.com/en-US/customer-service/product-security.html

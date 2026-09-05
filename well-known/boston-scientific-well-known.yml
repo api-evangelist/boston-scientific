@@ -1,0 +1,166 @@
+generated: '2026-09-04'
+method: probed
+source: >-
+  Unauthenticated HTTPS GETs with a browser User-Agent against every host this record knows —
+  the registrable domain and www, the two product hosts named in the docs (LATITUDE remote
+  patient monitoring, CDx cardiac diagnostics), the investor and news hosts, and the Anatomy
+  Design System docs host published by the first-party GitHub org bos-sci.
+note: >-
+  NOTHING WAS FOUND. No host serves a single real /.well-known document. Two hosts return
+  HTTP 200 for every path probed and neither is a document: cdx.bostonscientific.com is an
+  Adobe Experience Manager soft-404 that answers every /.well-known/* and /openapi.json with
+  the BodyGuardian marketing page, and www.anatomydesignsystem.com answers with a JavaScript
+  bot-challenge interstitial ("Loading..." + window.location.replace with a Joken JWT), not
+  with content. Both are recorded below as misses with the body shape that disqualified them.
+  No WellKnown or SecurityTxt pointer is wired into apis.yml as a result.
+hosts:
+  - host: www.bostonscientific.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: bostonscientific.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: latitude.bostonscientific.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: cdx.bostonscientific.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        result: miss
+        note: >-
+          Soft-404. Body is the "BodyGuardian - Boston Scientific Cardiac Diagnostics" HTML
+          page, served for every path on this host. Not a document.
+      - path: /.well-known/openid-configuration
+        status: 200
+        result: miss
+        note: Soft-404 — same BodyGuardian HTML page.
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        result: miss
+        note: Soft-404 — same BodyGuardian HTML page.
+      - path: /.well-known/api-catalog
+        status: 200
+        result: miss
+        note: Soft-404 — same BodyGuardian HTML page.
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        result: miss
+        note: Soft-404 — same BodyGuardian HTML page.
+      - path: /.well-known/agent-card.json
+        status: 200
+        result: miss
+        note: >-
+          Soft-404 — HTML, not a JSON AgentCard object. Explicitly NOT counted as an agent card.
+  - host: www.cdx.bostonscientific.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: investors.bostonscientific.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: news.bostonscientific.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: www.anatomydesignsystem.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        result: miss
+        note: >-
+          Bot-challenge interstitial, not a document. Body is
+          "<html><head><title>Loading...</title>...window.location.replace(...&js=<JWT>)".
+          Returned identically for every path probed on this host.
+      - path: /.well-known/openid-configuration
+        status: 200
+        result: miss
+        note: Bot-challenge interstitial — same "Loading..." JS redirect body.
+      - path: /.well-known/api-catalog
+        status: 200
+        result: miss
+        note: Bot-challenge interstitial — same "Loading..." JS redirect body.
+      - path: /.well-known/agent-card.json
+        status: 200
+        result: miss
+        note: >-
+          Bot-challenge interstitial — HTML, not a JSON AgentCard object. Explicitly NOT
+          counted as an agent card.
+summary:
+  hosts_probed: 8
+  documents_found: 0
+  soft_200_misses: 10

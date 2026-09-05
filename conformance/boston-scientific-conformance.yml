@@ -1,0 +1,102 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  Boston Scientific's own published LATITUDE Integration IDCO and HL7 Specifications
+  (359483-012_LATITUDE_CM_en_S.pdf, HTTP 200, application/pdf) plus the Cardiac Diagnostics
+  integration-solutions page at cdx.bostonscientific.com. Every entry below quotes the
+  provider's own text; nothing is inferred from product marketing.
+note: >-
+  Boston Scientific publishes no OpenAPI, AsyncAPI, GraphQL SDL or WSDL, so none of the
+  web-API conformance families (oauth2, oidc, rfc9457, json:api, pagination, idempotency)
+  can be asserted — they are recorded as conforms:false with the honest reason. What it DOES
+  publish is a fully specified healthcare-messaging contract, and that contract declares its
+  domain standards by name and version inside the specification document itself.
+conformance:
+  - id: hl7-v2
+    name: HL7 v2 messaging
+    conforms: true
+    evidence: >-
+      "the message is a standard HL7 v2.6 unsolicited orders and observations message" —
+      LATITUDE Integration IDCO and HL7 Specifications, section "LATITUDE IDCO MESSAGE
+      SPECIFICATION". The document's second profile is separately declared: "The LATITUDE HL7
+      file is based upon the HL7 2.3.1 Observation Result Unsolicited message". Worked
+      examples in the document carry the version in MSH-12 ("ORU^R01^ORU_R01|1000000134|P|2.6"
+      and "ORU^R01|1000000138|P|2.3.1").
+    url: https://www.bostonscientific.com/content/dam/elabeling/crm/pr/359483-012_LATITUDE_CM_en_S.pdf
+    versions:
+      - '2.6'
+      - 2.3.1
+    message_types:
+      - ORU^R01^ORU_R01
+      - ORU^R01
+  - id: ihe-pcd-idco
+    name: IHE Patient Care Device — Implantable Device Cardiac Observation (PCD-09)
+    conforms: true
+    domain_standard: true
+    evidence: >-
+      "The LATITUDE IDCO message is a PCD-09 message per IHE PCD Technical Framework Revision
+      3.0, October 11th, 2013." The spec's reference list points readers at www.ihe.net for
+      IDCO messaging and at the PCD-09 Technical Framework, and the example messages carry the
+      IHE_PCD_ profile identifier in MSH-21.
+    url: https://www.bostonscientific.com/content/dam/elabeling/crm/pr/359483-012_LATITUDE_CM_en_S.pdf
+    profile: PCD-09
+    framework_revision: 3.0 (2013-10-11)
+  - id: ieee-11073-10103
+    name: ISO/IEEE 11073-10103 Implantable Device, Cardiac nomenclature
+    conforms: true
+    domain_standard: true
+    evidence: >-
+      "coded using the ISO/IEEE 11073-10103:2014 IDC nomenclature". Observation codes in the
+      published example messages use the nomenclature verbatim, e.g.
+      "OBX|246|NM|731136^MDC_IDC_SET_BRADY_MAX_TRACKING_RATE^MDC". The spec links
+      standards.ieee.org/findstds/standard/11073-10103-2012.html as its reference.
+    url: https://www.bostonscientific.com/content/dam/elabeling/crm/pr/359273-011_LATITUDE_NXT_IDCO_en-GBR_W_S.pdf
+  - id: hipaa
+    name: HIPAA
+    conforms: true
+    evidence: >-
+      Boston Scientific Cardiac Diagnostics states its integration activities follow HIPAA and
+      HITECH requirements and HL7 interchange guidelines.
+    url: https://www.cdx.bostonscientific.com/us/en/healthcare-professionals/services-technologies/integration-solutions.html
+  - id: soc2
+    name: SOC 2 Type 2
+    conforms: true
+    evidence: >-
+      The Cardiac Diagnostics integration-solutions page states the service aligns with System
+      and Organization Controls (SOC) for Service Organizations, SOC 2 Type 2. No audit report
+      or Trust Center page is published publicly, so this is a claim on the provider's own page
+      rather than an attestation we could fetch.
+    url: https://www.cdx.bostonscientific.com/us/en/healthcare-professionals/services-technologies/integration-solutions.html
+  - id: openapi
+    name: OpenAPI
+    conforms: false
+    evidence: >-
+      No OpenAPI or Swagger document at any probed location. /openapi.json, /swagger.json and
+      /llms.txt return 404 on www.bostonscientific.com, bostonscientific.com and
+      latitude.bostonscientific.com, and return an Adobe Experience Manager soft-404 HTML page
+      on cdx.bostonscientific.com.
+  - id: fhir
+    name: HL7 FHIR
+    conforms: false
+    evidence: >-
+      Not claimed anywhere on the provider's public surface. The published integration contract
+      is HL7 v2 / IHE PCD, not FHIR; no /metadata CapabilityStatement or FHIR base URL is
+      documented.
+  - id: oauth2
+    name: OAuth 2.0
+    conforms: false
+    evidence: >-
+      No OAuth authorization server metadata and no documented OAuth flow. Probes of
+      /.well-known/oauth-authorization-server and /.well-known/openid-configuration miss on
+      every host (see well-known/boston-scientific-well-known.yml).
+  - id: rfc9457
+    name: RFC 9457 Problem Details
+    conforms: false
+    evidence: No HTTP API contract is published, so no error envelope exists to assess.
+summary:
+  domain_standard_present: true
+  domain_standard_ids:
+    - ihe-pcd-idco
+    - ieee-11073-10103
+    - hl7-v2
+  web_api_standards_present: false

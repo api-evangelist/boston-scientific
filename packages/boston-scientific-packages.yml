@@ -1,0 +1,80 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  npm registry metadata (registry.npmjs.org) for the @boston-scientific scope, cross-checked
+  against the first-party GitHub organization https://github.com/bos-sci, which owns every
+  repository these packages are published from.
+note: >-
+  Boston Scientific publishes no API client SDK. Every first-party package found is front-end
+  tooling for the Anatomy Design System — a component library, design tokens and shared lint /
+  format configs used to build Boston Scientific's own web properties. They are recorded here
+  because they are genuinely first-party and genuinely published, not because they wrap an API.
+  All five last shipped in 2023-2024; the newest release on the scope is 2024-03-08.
+packages:
+  - name: '@boston-scientific/anatomy-react'
+    registry: npm
+    url: https://www.npmjs.com/package/@boston-scientific/anatomy-react
+    repository: https://github.com/bos-sci/anatomy-react
+    language: TypeScript
+    official: true
+    kind: ui-component-library
+    version: 2.4.2
+    published: '2024-03-08'
+    license: null
+    description: Anatomy Design System's React component library.
+  - name: '@boston-scientific/anatomy-tokens'
+    registry: npm
+    url: https://www.npmjs.com/package/@boston-scientific/anatomy-tokens
+    repository: https://github.com/bos-sci/anatomy-tokens
+    language: SCSS
+    official: true
+    kind: design-tokens
+    version: 4.0.2
+    published: '2023-11-15'
+    license: ISC
+    description: >-
+      Design tokens for Boston Scientific's Anatomy Design System. Ships scss, less, css and
+      json builds.
+  - name: '@boston-scientific/stylelint-config'
+    registry: npm
+    url: https://www.npmjs.com/package/@boston-scientific/stylelint-config
+    repository: https://github.com/bos-sci/configs
+    language: JavaScript
+    official: true
+    kind: lint-config
+    version: 1.1.0
+    published: '2023-11-06'
+    license: ISC
+    description: Stylelint config for Boston Scientific applications.
+  - name: '@boston-scientific/prettier-config'
+    registry: npm
+    url: https://www.npmjs.com/package/@boston-scientific/prettier-config
+    repository: https://github.com/bos-sci/configs
+    language: JavaScript
+    official: true
+    kind: format-config
+    version: 1.0.1
+    published: '2023-08-21'
+    license: ISC
+    description: Prettier config for Boston Scientific applications.
+  - name: '@boston-scientific/eslint-config'
+    registry: npm
+    url: https://www.npmjs.com/package/@boston-scientific/eslint-config
+    repository: https://github.com/bos-sci/configs
+    language: JavaScript
+    official: true
+    kind: lint-config
+    version: 0.0.3
+    published: '2023-08-23'
+    license: ISC
+    description: ESLint config for Boston Scientific applications.
+absent:
+  - name: '@boston-scientific/anatomy-icons'
+    registry: npm
+    version: null
+    published: null
+    note: >-
+      The bos-sci/anatomy-icons repository exists on GitHub but registry.npmjs.org returns
+      "Not found" for a package of that name — the icon set is not published to npm.
+sdk_count: 0
+package_count: 5

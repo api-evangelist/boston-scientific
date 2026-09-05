@@ -1,0 +1,23 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  Searched for an official Boston Scientific MCP server across the bos-sci GitHub organization,
+  the npm @boston-scientific scope, and the company's own web properties; probed
+  /.well-known/ai-plugin.json and /.well-known/agent-card.json on eight hosts (see
+  well-known/boston-scientific-well-known.yml).
+status: none
+tools: []
+tool_count: 0
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+note: >-
+  No MCP server exists — hosted, remote or stdio — and none could be derived. Deriving a
+  candidate tool list requires an OpenAPI to bind tools to, and Boston Scientific publishes no
+  OpenAPI: the company's documented integration surface is HL7 v2 message delivery described in
+  a PDF. No MCPServer pointer is wired into apis.yml, because a pointer here would assert an
+  agent surface the provider does not serve. This file records the absence, with the probes.

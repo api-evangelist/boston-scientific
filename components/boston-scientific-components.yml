@@ -1,0 +1,58 @@
+generated: '2026-09-04'
+method: searched
+source: >-
+  https://github.com/bos-sci (Boston Scientific's first-party GitHub organization) and the
+  npm @boston-scientific scope. The docs site www.anatomydesignsystem.com is the published
+  home page of bos-sci/anatomy-docs.
+note: >-
+  Anatomy is Boston Scientific's global design system. These are client-side UI components
+  Boston Scientific publishes for building its own web properties — distinct from an API SDK,
+  and recorded here rather than as SDKs for exactly that reason. The whole system is dormant:
+  no repository in the organization has been pushed since May 2024 and no package has shipped
+  since March 2024.
+families:
+  - name: Anatomy React
+    kind: react-component-library
+    package: '@boston-scientific/anatomy-react'
+    repository: https://github.com/bos-sci/anatomy-react
+    registry_url: https://www.npmjs.com/package/@boston-scientific/anatomy-react
+    version: 2.4.2
+    published: '2024-03-08'
+    language: TypeScript
+    description: Anatomy Design System's React component library.
+  - name: Anatomy Tokens
+    kind: design-tokens
+    package: '@boston-scientific/anatomy-tokens'
+    repository: https://github.com/bos-sci/anatomy-tokens
+    registry_url: https://www.npmjs.com/package/@boston-scientific/anatomy-tokens
+    version: 4.0.2
+    published: '2023-11-15'
+    formats:
+      - scss
+      - less
+      - css
+      - json
+    description: Design tokens for Boston Scientific's Anatomy Design System.
+  - name: Anatomy Icons
+    kind: icon-set
+    package: null
+    repository: https://github.com/bos-sci/anatomy-icons
+    registry_url: null
+    version: null
+    published: null
+    note: >-
+      Repository exists (last pushed 2024-05-24) but no npm package of this name is published —
+      registry.npmjs.org returns "Not found".
+docs:
+  - name: Anatomy Design System documentation
+    url: https://www.anatomydesignsystem.com
+    repository: https://github.com/bos-sci/anatomy-docs
+    status: bot-challenged
+    note: >-
+      The docs host answers every request, including the root, with a JavaScript bot-challenge
+      interstitial rather than content, so the reference could not be read by a crawler on
+      2026-09-04. The site is real — it is the declared homepage of bos-sci/anatomy-docs — but
+      it is machine-unreadable.
+loaders: []
+hosted_surfaces: []
+component_count_families: 3
