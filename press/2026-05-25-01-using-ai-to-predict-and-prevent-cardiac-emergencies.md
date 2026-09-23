@@ -1,7 +1,9 @@
 ---
 title: Using AI to predict and prevent cardiac emergencies
 url: https://news.bostonscientific.com/ai-diagnostic-heart-failure-symptoms-arrythmia
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Boston Scientific" press release artificial intelligence'
 position: 1
 source: serpapi-google

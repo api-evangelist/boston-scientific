@@ -1,7 +1,9 @@
 ---
 title: Boston Scientific uses AI in medical tech for 9 years
 url: https://www.linkedin.com/posts/henson-sy-5295232_paid-program-how-ai-is-transforming-health-activity-7325902716625399808-Nhps
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Boston Scientific" press release artificial intelligence'
 position: 5
 source: serpapi-google

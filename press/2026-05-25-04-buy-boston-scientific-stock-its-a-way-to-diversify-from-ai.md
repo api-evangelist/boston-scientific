@@ -1,7 +1,9 @@
 ---
 title: Buy Boston Scientific Stock. It's a Way to Diversify From AI?
 url: https://www.barrons.com/articles/buy-boston-scientific-stock-price-pick-0001482400
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Boston Scientific" press release artificial intelligence'
 position: 4
 source: serpapi-google

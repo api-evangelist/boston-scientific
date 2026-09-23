@@ -1,7 +1,9 @@
 ---
 title: 'Boston Scientific''s AI Strategy: Analysis of Dominance in ...'
 url: https://www.klover.ai/boston-scientific-ai-strategy-analysis-of-dominance-in-medical-technologies/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Boston Scientific" press release artificial intelligence'
 position: 2
 source: serpapi-google
