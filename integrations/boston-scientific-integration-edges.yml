@@ -148,6 +148,72 @@ edges:
     identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
   detected_by: sweep-ivd-diagnostics.py
   first_seen: '2026-10-21'
+- partner_name: Health Canada (Medical Device Licence)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://health-products.canada.ca/api/medical-devices/company/?id=101713&lang=en&type=json
+  category: Canadian medical device licence
+  contract_reference:
+    register: Health Canada Medical Devices Active Licence Listing (MDALL) public API (health-products.canada.ca/api/medical-devices)
+    standard: Canada Medical Devices Regulations (SOR/98-282), Medical Device Licence
+    spec_file: null
+    role: licence-holder
+    registered_name: BOSTON SCIENTIFIC CORPORATION
+    register_country: US
+    register_id: https://health-products.canada.ca/api/medical-devices/company/?id=101713&lang=en&type=json
+    company_status: A
+    matched_domain: bostonscientific.com
+    matched_by: domain
+    certified_products:
+    - product: Health Canada Medical Device Licence, Class II
+      product_type: Class II
+      risk_class: 2
+      lapsed: false
+      first_issued: '1998-09-22'
+      conditional: false
+      licences_sample:
+      - 1.5 CRYOABLATION NEEDLES
+      - 1.5 MRI CRYOABLATION NEEDLES
+      - 1.5 THERMAL SENSOR
+      - 5F, 6F AND 7F EXPO ANGIOGRAPHIC CATHETERS
+      - ACCESSORY KIT (FOR USE WITH MODEL 3120 PROGRAMMER/RECORDER/MONITOR (PRM))
+    - product: Health Canada Medical Device Licence, Class III
+      product_type: Class III
+      risk_class: 3
+      lapsed: false
+      first_issued: '1998-12-30'
+      conditional: false
+      licences_sample:
+      - 700 PENILE PROSTHESIS
+      - 700 PENILE PROSTHESIS RESERVOIRS
+      - ADVANCE XP MALE SLING SYSTEM
+      - ADVANIX BILIARY STENT WITH NAVIFLEX RX DELIVERY SYSTEM
+      - ADVANIX BILIARY STENTS
+    - product: Health Canada Medical Device Licence, Class IV
+      product_type: Class IV
+      risk_class: 4
+      lapsed: false
+      first_issued: '1998-09-22'
+      conditional: false
+      licences_sample:
+      - ACCESS SOLUTIONS
+      - ACUITY X4
+      - AGENT MONORAIL PACLITAXEL-COATED PTCA BALLOON CATHETER
+      - ANGIOJET ULTRA THROMBECTOMY SYSTEM
+      - ATHLETIS OVER-THE-WIRE PTA BALLOON DILATATION CATHETER
+    signal_note: certified_products = one entry per device RISK CLASS licensed by Health Canada, lapsed when no
+      licence of that class is still issued (status I / D, no end date); licence names are a sample, licence and
+      device counts are context, never counted
+    detected_by: sweep-canada-medical-device-licensing.py
+    detected: '2026-10-22'
+    identity: wikidata Q894585 'Boston Scientific' P856 http://www.bostonscientific.com
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-canada-medical-device-licensing.py
+  first_seen: '2026-10-22'
 generated: '2026-10-18'
 method: searched
 source:
@@ -174,3 +240,5 @@ checked:
 - https://ec.europa.eu/tools/eudamed/api/
 - https://www.accessdata.fda.gov/premarket/ftparea/clia_detail.zip
 - https://www.advamed.org/advameddx/members/
+- https://health-products.canada.ca/api/medical-devices/company/?lang=en&type=json
+- https://health-products.canada.ca/api/medical-devices/licence/?lang=en&type=json
