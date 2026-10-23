@@ -5,8 +5,15 @@
       "source": "https://news.bostonscientific.com/",
       "feed_url": "https://news.bostonscientific.com/news-releases?pagetemplate=rss",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "discovered"
+    },
+    {
+      "source": "https://news.bostonscientific.com/news-releases?pagetemplate=rss",
+      "feed_url": "https://news.bostonscientific.com/news-releases?pagetemplate=rss",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://www.bostonscientific.com/en-US/customer-service.html",
@@ -16,6 +23,6 @@
       "method": "none"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 5,
+  "fetched": "2026-10-17T14:53:57Z"
 }
