@@ -1,4 +1,4 @@
-# Boston Scientific (boston-scientific)
+# Boston Scientific
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,64 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Boston Scientific is a global medical device manufacturer that develops, manufactures, and markets devices used in interventional medical specialties including interventional cardiology, cardiac rhythm management, electrophysiology, urology, pelvic health, endoscopy, neuromodulation, and peripheral interventions. Boston Scientific is a Fortune 500 company traded on the NYSE (BSX) and headquartered in Marlborough, Massachusetts. The company advances science for life by transforming patient lives through innovative medical solutions.
+Boston Scientific is a global medical device manufacturer that develops, manufactures, and markets devices used in interventional medical specialties including interventional cardiology, cardiac rhythm management, electrophysiology, urology, pelvic health, endoscopy, neuromodulation, and peripheral interventions. The company advances science for life by transforming patient lives through innovative medical solutions.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/apis.yml)
+**Areas:** Medical Devices · Digital Health · Cardiology · Urology · Endoscopy · Neuromodulation · Fortune 500
 
-## Scope
+## Boston Scientific on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Boston Scientific is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/boston-scientific/](https://apis.io/providers/boston-scientific/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Medical Devices
-- Digital Health
-- Cardiology
-- Urology
-- Endoscopy
-- Neuromodulation
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (3)
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-04-21
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Boston Scientific Domain Security](https://apis.io/security/boston-scientific/boston-scientific-domain-security/)
+- [Boston Scientific Trust Center](https://apis.io/security/boston-scientific/boston-scientific-trust-center/)
+- [Boston Scientific Vulnerability Disclosure](https://apis.io/security/boston-scientific/boston-scientific-vulnerability-disclosure/)
 
-No public APIs have been documented yet. Contributions welcome.
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
+
+- [Boston Scientific Plans Pricing](https://apis.io/plans/boston-scientific/boston-scientific-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Boston Scientific Rate Limits](https://apis.io/rate-limits/boston-scientific/boston-scientific-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.bostonscientific.com)
-- [Investor Relations](https://www.bostonscientific.com/en-US/investor-relations.html)
-- [Digital Health](https://www.bostonscientific.com/en-US/about-us/digital-health.html)
-- [HCP Portal](https://www.bostonscientific.com/en-US/hcp.html)
-- [Careers](https://www.bostonscientific.com/en-US/careers.html)
+- [Documentation](https://www.bostonscientific.com/content/dam/elabeling/crm/pr/359483-012_LATITUDE_CM_en_S.pdf)
+- [Sign up](https://www.bostonscientific.com/en-US/account/registration.html)
+- [Support](https://www.bostonscientific.com/en-US/customer-service.html)
+- [Blog](https://news.bostonscientific.com/)
+- [Terms of service](https://www.bostonscientific.com/en-US/terms-of-use.html)
+- [Privacy policy](https://www.bostonscientific.com/en-US/privacy-policy.html)
+- [GitHub](https://github.com/bos-sci)
 
-## Therapeutic Areas
+## API Evangelist rating
 
-- Cardiovascular and Cardiac Rhythm Management
-- Electrophysiology
-- Urology and Pelvic Health
-- Endoscopy and Oncology
-- Neuromodulation
-- Peripheral Interventions
+**Kin Score 24.9** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Digital Health Capabilities
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 42.1 |
 
-Connected cardiac devices, remote patient monitoring, electrophysiology mapping systems, implantable device data, clinical data integration, FHIR interoperability
+**Agent readiness 2.5** — human-only
 
-## About
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-- **Founded:** 1979
-- **Headquarters:** Marlborough, Massachusetts, USA
-- **Stock Ticker:** BSX (NYSE)
-- **Industry:** Medical Devices (SIC 3841)
+**Regulatory alignment 23.4** — Health
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/boston-scientific/](https://apis.io/providers/boston-scientific/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** info@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Boston Scientific: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/boston-scientific/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
